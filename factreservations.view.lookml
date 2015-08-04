@@ -81,8 +81,56 @@
   - dimension: upgradescount
     type: number
     sql: ${TABLE}.upgradescount
+    
+###################   Measures   #################
 
   - measure: count
     type: count
     drill_fields: []
+
+  - measure: delivered_emails_count
+    type: sum
+    sql: ${TABLE}.duplicateemailscount
+
+  - measure: openned_emails_count
+    type: sum
+    sql:  ${TABLE}.openrate
+
+  - measure: checkins_count
+    type: sum
+    sql: ${TABLE}.checkedinscount
+    
+  - measure: offers_count
+    type: sum
+    sql: ${TABLE}.offerscount   
+
+  - measure: offers_revenue
+    type: sum
+    sql: ${TABLE}.offerdollar
+    value_format: '$#,##0.00'
+
+
+  - measure: upgrade_count
+    type: sum
+    sql: ${TABLE}.upgradescount   
+
+  - measure: upgrade_revenue
+    type: sum
+    sql: ${TABLE}.upgradedollar
+    value_format: '$#,##0.00'
+    
+  - measure: cancelled_revenue    
+    type: sum
+    sql: ${TABLE}.cancelledrevenue
+    value_format: '$#,##0.00'
+
+  - measure: cancelled_count    
+    type: sum
+    sql: ${TABLE}.cancelledcount
+    
+  - measure: total_revenue    
+    type: sum
+    sql: ${TABLE}.totalrevenue
+    value_format: '$#,##0.00'
+    
 
