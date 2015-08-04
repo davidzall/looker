@@ -138,14 +138,97 @@
     type: count
     drill_fields: []
 
-  - measure: totalrevenue
+  - measure: totalrevenue_cad
     type: sum
     sql: ${requestrevenue}
     value_format: '$#,##0.00'
-  
+
+  - measure: totalrevenue_local
+    type: sum
+    sql: ${requestrevenuelocal}
+    value_format: '$#,##0.00'
+
+  - measure: totalrevenue_cancelled_cad
+    type: sum
+    sql: ${requestrevenue}
+    filters: 
+        status: 'Cancelled'
+    value_format: '$#,##0.00'
+        
+  - measure: totalrevenue_cancelled_local
+    type: sum
+    sql: ${requestrevenuelocal}
+    filters: 
+        status: 'Cancelled'
+    value_format: '$#,##0.00'
+        
   - measure: checkin_count
     type: count
     drill_fields: []
     filters: 
         requesttype: 'PreCheckIn'
+  - measure: checkin_completed
+    type: count
+    drill_fields: []
+    filters: 
+        requesttype: 'PreCheckIn'
+        status: 'Complete'
+        
+  - measure: completed_offers  
+    type: count
+    drill_fields: []
+    filters: 
+        requesttype: 'Offer'
+        status: 'Complete'
+        
+  - measure: total_offers   
+    type: count
+    drill_fields: []
+    filters: 
+        requesttype: 'Offer'
+
+  - measure: offers_revenue_total_cad
+    type: sum
+    sql: ${requestrevenue}
+    filters: 
+        requesttype: 'Offer'
+    value_format: '$#,##0.00'
+
+  - measure: offers_revenue_complete_cad
+    type: sum
+    sql: ${requestrevenue}
+    filters: 
+        requesttype: 'Offer'
+        status: 'Complete'
+    value_format: '$#,##0.00'
+
+
+  - measure: completed_upgrades  
+    type: count
+    drill_fields: []
+    filters: 
+        requesttype: 'RoomUpgrade'
+        status: 'Complete'
+        
+  - measure: total_upgrades   
+    type: count
+    drill_fields: []
+    filters: 
+        requesttype: 'RoomUpgrade'
+        
+  - measure: upgrades_revenue_total_cad
+    type: sum
+    sql: ${requestrevenue}
+    filters: 
+        requesttype: 'RoomUpgrade'
+    value_format: '$#,##0.00'
+
+  - measure: upgrades_revenue_complete_cad
+    type: sum
+    sql: ${requestrevenue}
+    filters: 
+        requesttype: 'RoomUpgrade'
+        status: 'Complete'
+    value_format: '$#,##0.00'
+
     
