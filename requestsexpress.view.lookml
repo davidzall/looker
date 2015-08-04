@@ -231,4 +231,9 @@
         status: 'Complete'
     value_format: '$#,##0.00'
 
+  - measure: total_revenue
+    type: sum
+    sql: ${requestrevenue}
+    value_format: '$#,##0.00'    
+
     
