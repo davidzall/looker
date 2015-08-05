@@ -23,3 +23,7 @@
     type: count
     drill_fields: []
 
+
+  - measure: checkincounts
+    type: sum
+    sql: ${checkincount}
