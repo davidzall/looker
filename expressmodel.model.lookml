@@ -17,6 +17,7 @@
    - join: dimhotel  
      sql_on: dimhotel.hotel_key = factrequestsexpress.hotel_key
      relationship: many_to_one
+   
    - join: dimguest  
      sql_on: dimguest.guest_key = factrequestsexpress.guest_key
      relationship: many_to_one
