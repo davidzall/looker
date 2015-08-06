@@ -13,7 +13,7 @@
   </tr>
   <tr>
     <td style="font-weight:800;padding-top:15px;color:#76678b;border:none;padding-left:0px;">Trial Owner</td>
-    <td style="font-weight:500;padding-top:15px;color:#76678b;border:none;">guestdriven</td> 
+    <td style="font-weight:500;padding-top:15px;color:#76678b;border:none;">Guestdriven</td> 
   </tr>
   <tr>
     <td style="font-weight:800;padding-top:15px;color:#76678b;border:none;padding-left:0px;">Trial Start Date</td>
