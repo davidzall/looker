@@ -88,6 +88,10 @@
     type: count
     drill_fields: []
 
+  - measure: reservations_count
+    type: sum
+    sql: ${TABLE}.reservationscount
+    
   - measure: delivered_emails_count
     type: sum
     sql: ${TABLE}.duplicateemailscount
