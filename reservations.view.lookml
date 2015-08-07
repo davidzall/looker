@@ -94,7 +94,7 @@
     
   - measure: delivered_emails_count
     type: sum
-    sql: ${TABLE}.duplicateemailscount
+    sql: ${TABLE}.deliveredemailscount
 
   - measure: openned_emails_count
     type: sum
