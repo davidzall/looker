@@ -21,7 +21,10 @@
    - join: dimguest  
      sql_on: dimguest.guest_key = factrequestsexpress.guest_key
      relationship: many_to_one
-    
+     
+   - join: factreservations
+     relationship: many_to_one
+     sql_on: ${factrequestsexpress.hotel_key} = ${factreservations.hotel_key} AND ${factreservations.day_key} = ${factrequestsexpress.day_key}
   
 - explore: factreservations
   joins: 
