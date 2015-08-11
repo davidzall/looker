@@ -40,3 +40,5 @@
 
 
 - explore: report6
+
+- explore: qview
