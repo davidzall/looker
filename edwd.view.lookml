@@ -1,4 +1,4 @@
-- view: edwd
+- view: QView
   derived_table:
 # # Specify the table name if it's different from the view name:
 #   sql_table_name: my_schema_name.edwd
