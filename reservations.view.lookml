@@ -4,7 +4,7 @@
 
   - dimension: primary_key
     hidden: true
-    sql: ${factreservations.hotel_key} || CAST(${factreservations.day_key} as char(8))
+    sql: ${hotel_key} || ${day_key}::varchar
     primary_key: true
     
   - dimension: availableofferscount
@@ -12,7 +12,8 @@
     sql: ${TABLE}.availableofferscount
 
   - dimension: cancelledcount
-    sql: ${TABLE}.cancelledcount
+    type: number
+    sql: ${TABLE}.cancelledcount::float
 
   - dimension: cancelledrevenue
     type: number
@@ -135,7 +136,7 @@
 
   - measure: cancelled_count    
     type: sum
-    sql: ${TABLE}.cancelledcount
+    sql: ${cancelledcount}
     
   - measure: total_revenue    
     type: sum

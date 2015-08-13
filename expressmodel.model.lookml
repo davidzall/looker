@@ -24,8 +24,8 @@
      
    - join: factreservations
      relationship: many_to_one
-     sql_on: ${factrequestsexpress.hotel_key} = ${factreservations.hotel_key} AND ${factreservations.day_key} = ${factrequestsexpress.day_key}
-  
+#      sql_on: ${factrequestsexpress.hotel_key} = ${factreservations.hotel_key} AND ${factreservations.day_key} = ${factrequestsexpress.day_key}
+     sql_on: ${factrequestsexpress.hotel_key} || ${factrequestsexpress.day_key}::varchar = ${factreservations.primary_key}
 - explore: factreservations
   joins: 
    - join: dimdate 

@@ -26,5 +26,4 @@
   sets:
     detail:
       - guest_key
-      - sum
 
