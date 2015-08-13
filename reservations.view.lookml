@@ -2,6 +2,11 @@
   sql_table_name: public.factreservations
   fields:
 
+  - dimension: primary_key
+    hidden: true
+    sql: ${factreservations.hotel_key} || CAST(${factreservations.day_key} as char(8))
+    primary_key: true
+    
   - dimension: availableofferscount
     type: number
     sql: ${TABLE}.availableofferscount
