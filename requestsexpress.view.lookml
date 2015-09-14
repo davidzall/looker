@@ -91,6 +91,7 @@
   - dimension: requestid
     type: int
     sql: ${TABLE}.requestid
+    primary_key: true
 
   - dimension: requestrevenue
     type: number
