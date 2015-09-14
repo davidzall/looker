@@ -4,7 +4,7 @@
 
   - dimension: day
     type: int
-    sql: ${TABLE}.day
+    sql: ${TABLE}.dayval
 
   - dimension: daynameen
     sql: ${TABLE}.daynameen
@@ -29,7 +29,7 @@
 
   - dimension: month
     type: int
-    sql: ${TABLE}.month
+    sql: ${TABLE}.monthval
 
   - dimension: monthnameen
     sql: ${TABLE}.monthnameen
@@ -43,7 +43,7 @@
 
   - dimension: quarter
     type: int
-    sql: ${TABLE}.quarter
+    sql: ${TABLE}.quarterval
 
   - dimension: quarternameen
     sql: ${TABLE}.quarternameen
