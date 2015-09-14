@@ -12,7 +12,7 @@
 - explore: factrequestsexpress
   joins: 
    - join: dimdate 
-     sql_on: dimdate.day = factrequestsexpress.day_key
+     sql_on: dimdate.dayval = factrequestsexpress.day_key
      relationship: many_to_one
    - join: dimhotel  
      sql_on: dimhotel.hotel_key = factrequestsexpress.hotel_key
@@ -29,7 +29,7 @@
 - explore: factreservations
   joins: 
    - join: dimdate 
-     sql_on: dimdate.day = factreservations.day_key
+     sql_on: dimdate.dayval = factreservations.day_key
      relationship: many_to_one
    - join: dimhotel  
      sql_on: dimhotel.hotel_key = factreservations.hotel_key
